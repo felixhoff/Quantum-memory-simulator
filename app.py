@@ -166,7 +166,7 @@ def create_plot(show_results=False):
     # Plot input field at z = -L_vacuum
     fig.add_trace(go.Scatter(x=t_grid, y=np.abs(Ein)**2, fill='tozeroy',
                              name="Input", line=dict(color='steelblue')))
-    fig.add_trace(go.Scatter(x=t_grid, y=Omega_vals / np.max(Omega_vals), name="Control Ω(t) / max",
+    fig.add_trace(go.Scatter(x=t_grid, y=Omega_vals / np.max(Omega_vals), name="Control",
                              line=dict(color='firebrick', dash='dash')))
     
     if show_results:
@@ -228,11 +228,11 @@ def create_plot(show_results=False):
             
             # Add label for the medium
             fig_plot.add_annotation(
-                x=t_grid[0] + 0.1 * (t_grid[-1] - t_grid[0]),
+                x=t_grid[0] + 0.5 * (t_grid[-1] - t_grid[0]),  # Center horizontally
                 y=L/2,
                 text="Atomic ensemble",
                 showarrow=False,
-                font=dict(color="white", size=12, family="Arial Black")
+                font=dict(color="black", size=12, family="Arial Black")
             )
             
             fig_plot.update_layout(
