@@ -11,6 +11,8 @@ This simulator implements a numerical model of photon storage and retrieval in a
 - Retrieval of stored light
 - Comparison between slow light and memory protocols
 
+[Webapp screenshot](Webapp_Screenshot.PNG)
+
 ## Features
 
 - **Interactive Parameters**: Adjust various physical parameters through an intuitive interface:
